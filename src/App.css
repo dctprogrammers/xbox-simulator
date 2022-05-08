@@ -38,6 +38,7 @@
   --primary-color: #282c34;
   --light-color: #f3f3f3;
   --danger-color: #db2e2e;
+  --add-color: #00d0ff;
   /* --danger-color: #ea0f4a; */
   --danger-hover-color: #800080;
   /* --danger-hover-color: #c90d3f; */
@@ -72,8 +73,18 @@ code {
 
 a,
 button {
-  color: var(--light-color);
+  color: var(--danger-color);
   text-decoration: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+button:hover {
+  opacity: 0.75;
 }
 
 ul {
@@ -86,17 +97,102 @@ img {
   border: 0;
 }
 
-.App {
-  text-align: center;
+input {
+  /* height: 35px; */
+  /* width: 100%; */
+  padding: 10px;
+  outline: none;
+  border-radius: 12px;
+  border: 2px solid var(--light-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input:focus {
+  border: 2px solid var(--add-color);
+}
+
+.app {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.app-header {
+  /* min-height: 100vh; */
+  height: 12rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 3rem;
   color: var(--light-color);
+}
+
+.content {
+  /* display: grid;
+  grid-template-columns: 25% auto;
+  column-gap: 1rem; */
+  display: flex;
+  justify-content: center;
+}
+
+.left-side label {
+  font-size: 1.5rem;
+}
+
+.components {
+  padding: 8px 0;
+}
+
+.add-button {
+  margin: 0 16px;
+  color: var(--add-color);
+  border: 2px solid var(--add-color);
+}
+
+.remove-button {
+  border: 2px solid var(--danger-color);
+}
+
+.component-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.right {
+  min-width: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .App {
+  width: 70vh;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+} */
+
+.form-field {
+  flex: 2;
+}
+
+.output {
+  margin-left: 3rem;
+  flex: 1;
+}
+
+.form-field label,
+h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(84, 84, 84);
 }
