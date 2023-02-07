@@ -1,7 +1,7 @@
 # DCT XBOX Simulator
 
-Simulátor procesu mytí desek v zařízení XBOX.
+Simulator of the process of cleaning PCB in the XBOX machine.
 
-## Funkce
+## Function
 
-- přidat/odebrat komponentu představující další komoru zařízení s daným názvem
+- add/remove a component representing another chamber with the given name
